@@ -12,6 +12,7 @@
 	// 3단계
 	PreparedStatement psmt = conn.prepareStatement(SQL.DELETE_ARTICLE);
 	psmt.setString(1, seq);
+	psmt.setString(2, seq);
 	
 	// 4단계
 	psmt.executeUpdate();
