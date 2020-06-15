@@ -153,7 +153,7 @@
                     	<%
             				if(mb.getUid().equals(comment.getUid())){
             			%>
-                        <a href="/Jboard1/proc/deleteComment.jsp?seq=<%= comment.getSeq() %>">삭제</a>
+                        <a href="/Jboard1/proc/deleteComment.jsp?seq=<%= comment.getSeq() %>&parent=<%=article.getSeq() %>">삭제</a>
                         <a href="#">수정</a>
                         <% } %>
                     </div>

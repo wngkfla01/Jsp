@@ -46,4 +46,8 @@ public class SQL {
 	public final static String UPDATE_COMMENT_COUNT = "UPDATE `JBOARD_ARTICLE` SET `comment` = `comment` + 1 " 
 													+ "WHERE `seq`=?";
 	
+	public final static String DELETE_COMMENT= "DELETE FROM `JBOARD_ARTICLE` WHERE `seq`=?";
+	
+	public final static String DELETE_COMMENT_COUNT="UPDATE `JBOARD_ARTICLE` SET `comment` = `comment`-1"
+													+ "WHERE `seq`=?";
 }

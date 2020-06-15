@@ -6,6 +6,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
+	// 1, 2단계	
 	Connection conn = DBConfig.getConnection();
 	
 	// 3단계
