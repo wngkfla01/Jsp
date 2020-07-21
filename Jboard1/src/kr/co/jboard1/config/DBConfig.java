@@ -6,21 +6,21 @@ import java.sql.SQLException;
 
 public class DBConfig {
 
-	// DB¡§∫∏ - πË∆˜øÎ
+	// DBÏ†ïÎ≥¥ - Î∞∞Ìè¨Ïö©
 	//public static final String HOST = "jdbc:mysql://";
 	//public static final String USER = "jhr";
 	//public static final String PASS = "qlfanfkela10121";
 	
-	// DB¡§∫∏ - ∞≥πﬂøÎ
+	// DBÏ†ïÎ≥¥ - Í∞úÎ∞úÏö©
 	public static final String HOST = "jdbc:mysql://192.168.44.46:3306/jhr";
 	public static final String USER = "jhr";
 	public static final String PASS = "1234";
 	
 	public static Connection getConnection() throws Exception {
-		// 1¥‹∞Ë
+		// 1Îã®Í≥Ñ
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		// 2¥‹∞Ë
+		// 2Îã®Í≥Ñ
 		Connection conn = DriverManager.getConnection(HOST, USER, PASS);
 		
 		return conn;
