@@ -25,22 +25,23 @@
 	String content = mRequest.getParameter("content");
 	String fname   = mRequest.getFilesystemName("file");
 	String regip   = request.getRemoteAddr();
-	
 	int hasFile = (fname != null) ? 1 : 0;
 	
 	// 1, 2단계
 	Connection conn = DBConfig.getConnection();
 	
+	// 트랜젝션 시작(begin)
+	conn.setAutoCommit(false);
+	
 	// 3단계	
 	PreparedStatement psmt = conn.prepareStatement(SQL.INSERT_ARTICLE);
 	psmt.setString(1, title);
 	psmt.setString(2, content);
-	psmt.setInt(3, hasFile);
+	psmt.setInt(3, hasFile);	
 	psmt.setString(4, uid);
 	psmt.setString(5, regip);
 	
-	Statement stmt = conn.createStatement();
-	
+	Statement stmt = conn.createStatement();	
 	
 	// 4단계
 	psmt.executeUpdate();
@@ -53,8 +54,7 @@
 		parent = rs.getInt(1);
 	}
 	
-	
-	// 파일을 첨부했을 경우 파일명 코드화
+	// 파일을 첨부했을 경우 파일명 코드화해서 저장
 	if(fname != null){
 		
 		// 파일명 만들기
@@ -82,6 +82,9 @@
 		psmtFile.executeUpdate();
 		psmtFile.close();
 	}
+	
+	// 트랜젝션 끝(실질적인 쿼리 실행)
+	conn.commit();
 	
 	// 6단계	
 	psmt.close();
