@@ -21,7 +21,7 @@ public class ViewService implements CommonService {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		ArticleVO vo = dao.getArticle(seq);
-		List<ArticleVO> comments = dao.getComments();
+		List<ArticleVO> comments = dao.getComments(seq);
 		
 		
 		req.setAttribute("group", group);
