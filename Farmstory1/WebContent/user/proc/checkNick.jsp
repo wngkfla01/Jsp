@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 <%@page import="com.google.gson.JsonObject"%>
 <%@page import="kr.co.farmstory1.config.SQL"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="kr.co.farmstory1.config.DBConfig"%>
+=======
+<%@page import="kr.co.farmstory1.config.SQL"%>
+<%@page import="kr.co.farmstory1.config.DBConfig"%>
+<%@page import="com.google.gson.JsonObject"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git
 <%@page import="java.sql.Connection"%>
 <%@ page contentType="application/json;charset=UTF-8" pageEncoding="UTF-8"%>
 <%

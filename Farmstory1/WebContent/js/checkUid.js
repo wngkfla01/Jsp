@@ -46,6 +46,7 @@ $(document).ready(function(){
 		});
 	});   		
 	
+<<<<<<< HEAD
 });// 정규표현식
 var regId    = /^[a-z]+[a-z0-9]{3,19}$/;    // 아이디 검사식
 var regPw    = /^[a-z0-9_-]{6,18}$/;         // 비밀번호 검사식
@@ -94,4 +95,6 @@ $(document).ready(function(){
 		});
 	});   		
 	
+=======
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git
 });

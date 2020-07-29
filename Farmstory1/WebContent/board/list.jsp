@@ -108,6 +108,7 @@
             <% for(ArticleBean article : articles){ %>
             <tr>
                 <td><%= listCount-- %></td>
+<<<<<<< HEAD
                 <td><a href="./view.jsp?group=<%= group %>&cate=<%= cate %>"><%= article.getTitle() %></a>&nbsp;[<%= article.getComment() %>]</td>
                 <td><%= article.getNick() %></td>
                 <td><%= article.getRdate().substring(2, 10) %></td>
@@ -146,3 +147,40 @@
 
     
     
+=======
+                <td><a href="./view.jsp?seq=<%= article.getSeq() %>&group=<%= group %>&cate=<%= cate %>"><%= article.getTitle() %></a>&nbsp;[<%= article.getComment() %>]</td>
+                <td><%= article.getNick() %></td>
+                <td><%= article.getRdate().substring(2, 10) %></td>
+                <td><%= article.getHit() %></td>
+            </tr>
+            <% } %>
+        </table>
+    </article>
+
+    <!-- 페이지 네비게이션 -->
+    <div class="paging">
+    	<% if(groupStart > 1){ %>
+        	<a href="./list.jsp?group=<%= group %>&cate=<%= cate %>&pg=<%= groupStart-1 %>" class="prev">이전</a>
+        <% } %>
+        <% for(int i=groupStart ; i<=groupEnd ; i++){ %>
+        	<a href="./list.jsp?group=<%= group %>&cate=<%= cate %>&pg=<%= i %>" class="num <%= (currentPg == i) ? "current": "" %>"><%= i %></a>
+        <% } %>
+        
+        <% if(groupEnd < lastPage){ %>
+        	<a href="./list.jsp?group=<%= group %>&cate=<%= cate %>&pg=<%= groupEnd+1 %>" class="next">다음</a>
+        <% } %>
+    </div>
+
+    <!-- 글쓰기 버튼 -->
+    <a href="./write.jsp?group=<%= group %>&cate=<%= cate %>" class="btnWrite">글쓰기</a>
+</section>
+
+<!-- 컨텐츠 내용 끝 -->
+            </div>
+
+        </article>
+    </section>
+</div>
+
+<%@ include file="../_footer.jsp" %>
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git

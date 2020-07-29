@@ -83,4 +83,8 @@
         </div>
     </form>
 </section>
+<<<<<<< HEAD
 <%@ include file="../_footer.jsp" %>
+=======
+<%@ include file="../_footer.jsp" %>
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git

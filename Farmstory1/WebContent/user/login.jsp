@@ -23,5 +23,9 @@
         <a href="/Farmstory1/user/terms.jsp">회원가입</a>
     </div>
 </section>
+<<<<<<< HEAD
 <%@ include file="../_footer.jsp" %>
 © 2020 GitHub, Inc.
+=======
+<%@ include file="../_footer.jsp" %>
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git

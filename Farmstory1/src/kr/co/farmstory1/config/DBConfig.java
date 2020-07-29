@@ -9,7 +9,11 @@ public class DBConfig {
 	//private static final String PASS="1234";
 	
 	// 개발용
+<<<<<<< HEAD
 	private static final String HOST = "jdbc:mysql://192.168.44.46:3306/jhr";
+=======
+	private static final String HOST = "jdbc:mysql://192.168.50.82:3306/jhr";
+>>>>>>> branch 'master' of https://github.com/wngkfla01/Jsp.git
 	private static final String USER = "jhr";
 	private static final String PASS = "1234";
 	
